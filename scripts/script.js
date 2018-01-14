@@ -53,18 +53,18 @@ app.controller('myCtrl', function($scope,$compile) {
 app.directive("drTruncateLink", function($http) {
     return {
         restrict : "E",
-        template : `<a id=""   href=""  class="@">{{text}}</a>`,
+        template : `<a id="@id" href="@link"  class="@class" numb="@number">{{text}}</a>`,
         scope:{
-            link:'=',
-            id:'@',
-            class:'@',
+            link:'@link',
+            id:'@id',
+            class:'@class',
             text:'=',
-            number1:'='
+            numb:'@number'
         },
         link:function(scope,element,attr){
             debugger;
             console.log(element);
-            var res = element.text.substring( attr.number1, element.text.length);
+            var res = element.text.substring( attr.numb, element.text.length);
             var tempText1="...";
             var tr=text.replace(res,"...");
             document.getElementById("myId").remove();
