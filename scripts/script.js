@@ -53,7 +53,7 @@ app.controller('myCtrl', function($scope,$compile) {
 app.directive("drTruncateLink", function() {
     return {
         restrict : "E",
-        templateUrl : "directive/TruncateLink.html",
+        template : `<a id="@id" href="=link"  class="@class"></a>`,
         scope:{
             link:'=',
             id:'@',
