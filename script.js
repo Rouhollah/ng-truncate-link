@@ -50,10 +50,10 @@ app.controller('myCtrl', function($scope,$compile) {
     // }
 });
 
-app.directive("drTruncateLink", function($http) {
+app.directive("drTruncateLink", function() {
     return {
         restrict : "E",
-        template : `<a id=""   href=""  class="@">{{text}}</a>`,
+        templateUrl : "directive/TruncateLink.html",
         scope:{
             link:'=',
             id:'@',
