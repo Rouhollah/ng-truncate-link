@@ -1,0 +1,10 @@
+.myclass{
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    color: #B90413;
+    text-decoration: none;
+}
