@@ -1,1 +1,38 @@
 <span><a id="{{id}}" href="{{link}}"  class="{{class}}" style="cursor: pointer;" >{{text}}</a><span id="word" >{{show}}</span></span>
+
+<script>
+var res = scope.text.substring( scope.number, scope.text.length);
+            var tr=scope.text.replace(res,"...");
+            document.getElementById(scope.id).remove();
+            var tagA=document.createElement("a");
+            tagA.setAttribute('id', 'newA');
+            tagA.setAttribute('href', 'about.html');
+            tagA.text=tr;
+    
+            var tag_I_Show=document.createElement("i");
+            tag_I_Show.setAttribute('id', 'showIt');
+            tag_I_Show.onclick=showFullText;
+            tag_I_Show.innerHTML="show";
+    
+            var tag_I_Hide=document.createElement("i");
+            tag_I_Hide.setAttribute('id', 'HideIt');
+            tag_I_Hide.onclick=hideFullText;
+            tag_I_Hide.innerHTML="hide";
+    
+            document.body.appendChild(tagA);
+            document.body.appendChild(tag_I_Show);
+           
+        function showFullText(){
+            document.getElementById("newA").innerHTML=scope.text ;
+            document.getElementById("showIt").remove();
+            document.body.appendChild(tag_I_Hide);
+        }
+        function hideFullText(){
+            var res = scope.text.substring( scope.number, scope.text.length);
+            var tempText1="...";
+            var tr=scope.text.replace(res,"...");
+            document.getElementById("newA").innerHTML=tr;
+            document.getElementById("HideIt").remove();
+            document.body.appendChild(tag_I_Show);
+        }
+    </script> 

@@ -12,23 +12,26 @@ app.controller('myCtrl', function($scope,$http) {
 app.directive("drTruncateLink", function() {
     return {
         restrict : "E",
+        //replace:true,
+        //transclude:false,
         scope:{
             link:'@link',
-            id:'@id',
-            class:'@class',
+            more:'@more',
+            less:'@less',
             text:'=text',
             number:'@number',
+            word:'@word'
         },
-        templateUrl : "directive/TruncateLink.html",
+        template:`<a href="{{link}}"  class="{{class}}" style="cursor:pointer;">tr</a><span ng-show="showMore" id="word" >{{showMore?more:less}}</span>`,
         link:function(scope,element,attr){
             var res = scope.text.substring( scope.number, scope.text.length);
             var tr=scope.text.replace(res,"...");
-            document.getElementById(scope.id).remove();
-            var tagA=document.createElement("a");
-            tagA.setAttribute('id', 'newA');
-            tagA.setAttribute('href', 'about.html');
-            tagA.text=tr;
-    
+            var subtitution=tr;
+            var replaced=true;
+           // document.getElementById(scope.id).innerHTML=tr;
+           // document.getElementById(scope.id).setAttribute('href', scope.link);
+           // document.getElementById(scope.id).setAttribute('class',scope.class);
+
             var tag_I_Show=document.createElement("i");
             tag_I_Show.setAttribute('id', 'showIt');
             tag_I_Show.onclick=showFullText;
@@ -39,7 +42,7 @@ app.directive("drTruncateLink", function() {
             tag_I_Hide.onclick=hideFullText;
             tag_I_Hide.innerHTML="hide";
     
-            document.body.appendChild(tagA);
+           // document.body.appendChild(tagA);
             document.body.appendChild(tag_I_Show);
            
         function showFullText(){

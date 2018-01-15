@@ -19,8 +19,9 @@
         <i style="font-size:12px;">Original Text:</i>
         <p id="myText">{{text}}</p> <br>
         <i style="font-size:12px;">Truncated Text:</i>
-        <dr-truncate-link link="scripts/about.html" number=50 id="myId" class="myClass" text="text"></dr-truncate-link>
-
+        <div>
+                <dr-truncate-link link="scripts/about.html" number=50  text="text" more="show" less="hide"></dr-truncate-link>
+        </div>
         <div>
                 <p>{{text2}}</p><br>
               <p>  {{text2|truncateLink:25}}</p>
