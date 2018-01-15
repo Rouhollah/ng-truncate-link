@@ -1,6 +1,5 @@
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function ($scope, $http) {
-  // $scope.number=20;
   $scope.text =
     "By listening to this event, you can remove event listeners that might cause memory leaks." +
     " Listeners registered to scopes and elements are automatically cleaned up when they are destroyed," +
@@ -18,7 +17,6 @@ app.directive("drTruncateLink", function () {
       less: "@less",
       text: "=text",
       number: "@number",
-      word: "@word",
       class: "@class"
     },
     template: `<a href="{{link}}"  class="{{class}}">{{truncate}}</a>
