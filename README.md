@@ -36,3 +36,6 @@ you can truncate yout text with this filter.
 - item.Message: your text.
 - truncateText: name of filter.
 - 50: number of characters that are displayed.
+
+### Example
+[](https://codepen.io/fardin_esmi/project/full/ANqrzY/)
