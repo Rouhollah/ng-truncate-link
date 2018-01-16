@@ -13,8 +13,9 @@ This is a directive that produces &lt;a> element with ability to truncate text.
 </dr-truncate-link>
 ```
 ### details:
+- dr-truncate-link: name of directive.
 - link: put your address here.
-- number: With this field, you can specify how many characters are displayed.
+- number: With this attribute, you can specify how many characters are displayed.
 - text: your text must be here. static or dynamic.
 - more: this is a text that you want are displayed when the text has truncated.
 - less: This text is displayed before the main text is shortened.
@@ -34,4 +35,4 @@ you can truncate yout text with this filter.
 ### details
 - item.Message: your text.
 - truncateText: name of filter.
-- 50: number of character that are displayed.
+- 50: number of characters that are displayed.
