@@ -20,7 +20,7 @@ This is a directive that produces &lt;a> element with ability to truncate text.
 - more: this is a text that you want are displayed when the text has truncated.
 - less: This text is displayed before the main text is shortened.
 - class: use this attribute to set class(es).
-- target: Use this element, such as the <a> tag.
+- target: use this element, such as the `<a>` tag.
 
 # truncateText filter
 you can truncate yout text with this filter.
