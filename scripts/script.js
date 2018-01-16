@@ -46,7 +46,7 @@ app.directive("drTruncateLink", function () {
   };
 });
 
-app.filter("truncateLink", function () {
+app.filter("truncateText", function () {
   return function (text, number) {
     if (text.length > number) {
       var res = text.substring(number, text.length);
