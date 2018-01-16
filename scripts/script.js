@@ -1,11 +1,8 @@
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function ($scope, $http) {
   $scope.text =
-    "By listening to this event, you can remove event listeners that might cause memory leaks." +
-    " Listeners registered to scopes and elements are automatically cleaned up when they are destroyed," +
-    " but if you registered a listener on a service, or registered a listener on a DOM node that isn't being deleted," +
-    " you'll have to clean it up yourself or you risk introducing a memory leak.";
-  $scope.text2 = "این همه درد سر فایده نداره دیگه تو ، تو دلم جایی نداری";
+    "By this directive you can truncate your text. also if you would want your text to be a link , it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
+  $scope.text2 = "By this directive you can truncate your text. also if you would want your text to be a link , it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
 });
 
 app.directive("drTruncateLink", function () {
@@ -48,11 +45,14 @@ app.directive("drTruncateLink", function () {
 
 app.filter("truncateText", function () {
   return function (text, number) {
-    if (text.length > number) {
-      var res = text.substring(number, text.length);
-      var tr = text.replace(res, "...");
-      text = tr;
-      return text;
+    if (text!=null && text.trim()!="") {
+      if (text.length > number) {
+        var res = text.substring(number, text.length);
+        var tr = text.replace(res, "...");
+        text = tr;
+        return text;
+      }
     }
+    return text;
   };
 });
