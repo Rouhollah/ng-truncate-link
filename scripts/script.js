@@ -1,8 +1,11 @@
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function ($scope, $http) {
   $scope.text =
-    "By this directive you can truncate your text. also if you would want your text to be a link , it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
-  $scope.text2 = "By this directive you can truncate your text. also if you would want your text to be a link , it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
+    "By this directive you can truncate your link. just put your link on link of directive and enjoy"+
+    " of it. the directive has a more ability. this paragraph truncated by number=50. please refer to its help.";
+  $scope.text2 = "By this filter you can truncate your text. you can set a number and then you see"+
+  " the characters as many as you have specified. this paragraph truncated by number=25. please refer to its help for syntax.";
+
 });
 
 app.directive("drTruncateLink", function () {
@@ -14,9 +17,10 @@ app.directive("drTruncateLink", function () {
       less: "@less",
       text: "=text",
       number: "@number",
-      class: "@class"
+      class: "@class",
+      target:"@target"
     },
-    template: `<a href="{{link}}"  class="{{class}}">{{truncate}}</a>
+    template: `<a href="{{link}}"  class="{{class}}" target="{{target}}">{{truncate}}</a>
     <span style="cursor:pointer;" id="word" ng-click="checkCondition()">{{replace?more:less}}</span>`,
     link: function (scope, element, attr) {
       var res = scope.text.substring(scope.number, scope.text.length);
