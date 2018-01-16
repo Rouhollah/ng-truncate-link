@@ -38,4 +38,4 @@ you can truncate yout text with this filter.
 - 50: number of characters that are displayed.
 
 ### Example
-[](https://codepen.io/fardin_esmi/project/full/ANqrzY/)
+[Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/)
