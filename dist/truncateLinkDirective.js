@@ -1,7 +1,7 @@
 (function(angular) {
   const app = angular.module("truncateLinkModule", []);
 
-  app.directive("truncateLink", function() {
+  app.directive("ngTruncateLink", function() {
     return {
       restrict: "E",
       scope: {
