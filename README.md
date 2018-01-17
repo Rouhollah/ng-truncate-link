@@ -39,7 +39,5 @@ you can truncate your text with this filter.
  
 ### Example 
 [Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) 
-# LinkWithTruncateText
- 
-Its a directive that produces &lt;a> element with ability to truncate text.
+
  
