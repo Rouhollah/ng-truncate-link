@@ -3,14 +3,12 @@
 
 <head>
 
-        <script src="scripts/angular-min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="scripts/script.js"></script>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="bootstrap/css/style.css" />
+        <link rel="stylesheet" href="style.css" />
+
 </head>
 
-<body ng-app="myApp">
+<body ng-app="sampleModule">
         <div ng-controller="myCtrl">
                 <div class="container">
                         <p>
@@ -26,8 +24,8 @@
                                 <br>
                                 <i style="font-size:12px;">Truncated Text by directive:</i>
                                 <div>
-                                        <dr-truncate-link link="about.html" number=50 text="text" more="show" less="hide" class="noUnderLine">
-                                        </dr-truncate-link>
+                                        <truncate-link link="about.html" number=50 text="text" more="show" less="hide" class="noUnderLine">
+                                        </truncate-link>
                                 </div>
                         </div>
                         <br>
@@ -47,6 +45,19 @@
                         </div>
                 </div>
         </div>
+        <script src="angular-min.js"></script>
+        <script src="../dist/truncateLinkDirective.js"></script>
+
+        <script>
+
+                const app = angular.module("sampleModule", ['truncateLinkModule']);
+
+                app.controller("myCtrl", function ($scope, $http) {
+                        $scope.text =
+                                "By this directive you can truncate your text. also if you would want your text to be a link , it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
+                        $scope.text2 = "By this directive you can truncate your text. also if you would want your text to be a link , it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
+                });
+        </script>
 </body>
 
 </html>
