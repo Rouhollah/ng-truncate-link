@@ -2,7 +2,7 @@
 This is a directive that produces &lt;a> element with ability to truncate text. 
 ### Syntax 
 ``` 
-<dr-truncate-link  
+<ng-truncate-link  
                   link="about.html" or {{item.Address}} 
                   number=50  
                   text="a long text that must be truncate" or {{item.Message}} 
@@ -10,10 +10,10 @@ This is a directive that produces &lt;a> element with ability to truncate text.
                   less="hide"  
                   class="noUnderLine" 
                   target="_blank"> 
-</dr-truncate-link> 
+</ng-truncate-link> 
 ``` 
 ### details: 
-- dr-truncate-link: name of directive. 
+- ng-truncate-link: name of directive. 
 - link: put your address here. 
 - number: With this attribute, you can specify how many characters are displayed. 
 - text: your text must be here. static or dynamic. 
