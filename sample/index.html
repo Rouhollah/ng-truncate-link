@@ -11,26 +11,28 @@
 <body ng-app="sampleModule">
         <div ng-controller="myCtrl">
                 <div class="container">
-                       <h2>sample:</h2>
+                        <p>
+                                <h2>Truncate Link</h2>
+                        </p>
                         <div class="row">
-                                <br>
-                                <i style="font-size:16px;font-weight:bold">Original Text:</i>
+                                <i style="font-size:14px;font-weight:bold">Original Text:</i>
                                 <p id="myText">{{text}}</p>
                                 <br>
-                                <i style="font-size:16px;font-weight:bold">Truncated Text by directive:</i>
+                                <i style="font-size:14px;font-weight:bold">Truncated Text by directive:</i>
                                 <div>
                                         <ng-truncate-link link="about.html" number=50 text="text" more="show" less="hide" class="noUnderLine" trarget="_blank">
                                         </ng-truncate-link>
                                 </div>
                         </div>
-                        <br>
-                        <br>
+                        <p>
+                                <h2>Truncate Text</h2>
+                        </p>
                         <div class="row">
                                 <div>
-                                        <i style="font-size:16px;font-weight:bold">Original Text:</i>
+                                        <i style="font-size:14px;font-weight:bold">Original Text:</i>
                                         <p>{{text2}}</p>
                                         <br>
-                                        <i style="font-size:16px;font-weight:bold">Truncated Text by Filter:</i>
+                                        <i style="font-size:14px;font-weight:bold">Truncated Text by Filter:</i>
                                         <p> {{text2|truncateText:25}}</p>
                                 </div>
                         </div>
