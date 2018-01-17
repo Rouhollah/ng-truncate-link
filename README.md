@@ -35,7 +35,7 @@ you can truncate your text with this filter.
 ### details 
 - item.Message: your text. 
 - truncateText: name of filter. 
-- 50: number of characters that are displayed. 
+- 10: number of characters that are displayed. 
  
 ### Example 
 [Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) 
