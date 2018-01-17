@@ -10,9 +10,10 @@
         less: "@less",
         text: "=text",
         number: "@number",
-        class: "@class"
+        class: "@class",
+        target:"@target"
       },
-      template: `<a href="{{link}}"  class="{{class}}">{{truncate}}</a>
+      template: `<a href="{{link}}"  class="{{class}}" target="{{target}}">{{truncate}}</a>
     <span style="cursor:pointer;" id="word" ng-click="checkCondition()">{{replace?more:less}}</span>`,
       link: function(scope, element, attr) {
         var res = scope.text.substring(scope.number, scope.text.length);
