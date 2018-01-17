@@ -23,7 +23,7 @@ This is a directive that produces &lt;a> element with ability to truncate text.
 - target: use this element, such as the `<a>` tag.
 
 # truncateText filter
-you can truncate yout text with this filter.
+you can truncate your text with this filter.
 ## syntax
 ```
 {{item.Message|truncateText:50}}
