@@ -5,7 +5,7 @@ This is a directive that produces &lt;a> element with ability to truncate text.
 <dr-truncate-link 
                   link="about.html" or {{item.Address}}
                   number=50 
-                  text="text" or {{item.Message}}
+                  text="a long text that must be truncate" or {{item.Message}}
                   more="show" 
                   less="hide" 
                   class="noUnderLine"
