@@ -1,12 +1,13 @@
 {
   "name": "ng-truncate-link",
   "version": "1.0.0",
-  "description": "Its a directive that produces `<a>` element with ability to truncate text.",
+  "description": "Its a directive that produces `<a>` element with ability to truncate text. There is also a filter for the text if you do not want that text to be a link. Additionally, if you do not include any links in the link attribute, that text can be shortened, given that other features are also available",
   "repository": {
     "type": "git",
     "url": "https://github.com/Rouhollah/LinkWithTruncateText"
   },
-  "keywords": ["angularJS", "truncate", "truncate link"],
-  "author": "Rouhollah Torshizi",
-  "license": "GPL-3.0"
+  "keywords": ["angularjs", "truncate", "truncate link", "truncate text", "truncate filter"],
+  "author": "Rouhollah Torshizi <torshizi1@gmail.com>",
+   "license": "GPL-3.0",
+   "main": "dist/truncateLinkDirective.js"
 }

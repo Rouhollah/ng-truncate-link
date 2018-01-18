@@ -1,5 +1,6 @@
 # LinkWithTruncateText directive 
-This is a directive that produces &lt;a> element with ability to truncate text. 
+When you add this module to your project , you have a directive and a filter.
+You can use this directive for both a link and a simple text. with the filter you have, you can simply truncate the text.
 ### Syntax 
 ``` 
 <ng-truncate-link  
@@ -14,7 +15,7 @@ This is a directive that produces &lt;a> element with ability to truncate text.
 ``` 
 ### details: 
 - ng-truncate-link: name of directive. 
-- link: put your address here. 
+- link: put your address here. **NOTE: If you do not define this feature, the text input, will look like a plain text, not a link**. 
 - number: With this attribute, you can specify how many characters are displayed. 
 - text: your text must be here. static or dynamic. 
 - more: this is a text that you want are displayed when the text has truncated. 
@@ -38,6 +39,7 @@ you can truncate your text with this filter.
 - 10: number of characters that are displayed. 
  
 ### Example 
-[Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) 
+[Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) for 0.1.0 eddition.
+
 
  

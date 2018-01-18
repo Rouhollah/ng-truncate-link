@@ -5,7 +5,11 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" />
-
+        <style>
+                #wordForTruncate{
+                        color: red;
+                }
+        </style>
 </head>
 
 <body ng-app="sampleModule">
@@ -18,14 +22,29 @@
                                 <i style="font-size:14px;font-weight:bold">Original Text:</i>
                                 <p id="myText">{{text}}</p>
                                 <br>
-                                <i style="font-size:14px;font-weight:bold">Truncated Text by directive:</i>
+                                <i style="font-size:14px;font-weight:bold">Truncated Link by directive:</i>
                                 <div>
                                         <ng-truncate-link link="about.html" number=50 text="text" more="show" less="hide" class="noUnderLine" target="_blank">
                                         </ng-truncate-link>
                                 </div>
                         </div>
+                        <hr>
                         <p>
                                 <h2>Truncate Text</h2>
+                        </p>
+                        <div class="row">
+                                <i style="font-size:14px;font-weight:bold">Original Text:</i>
+                                <p id="myText">{{text}}</p>
+                                <br>
+                                <i style="font-size:14px;font-weight:bold">Truncated Text by directive:</i>
+                                <div>
+                                        <ng-truncate-link  number=50 text="text" more="more" less="less" class="noUnderLine">
+                                        </ng-truncate-link>
+                                </div>
+                        </div>
+                        <hr>
+                        <p>
+                                <h2>Truncate Text by Filter</h2>
                         </p>
                         <div class="row">
                                 <div>
@@ -46,10 +65,12 @@
                 const app = angular.module("sampleModule", ['truncateLinkModule']);
 
                 app.controller("myCtrl", function ($scope, $http) {
-                        $scope.text = "By this directive you can truncate your text. also if you would want your text to be a link ," +
-                                " it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
-                        $scope.text2 = "By this directive you can truncate your text. also if you would want your text to be a link ," +
-                                " it is possible.just put your link on link and enjoy.the directive has a more ability. please refer to its help.";
+                        $scope.text = "By this directive you can truncate your Link or Text. if you define a link in directive ,"+
+                        " it will generate <a> element and the text will be a link. just put your link on link attribute and enjoy. this is easy to install and easy to use.";
+                        
+                        $scope.text2 = "Also by this directive you can truncate your text. if you would want your text to be a link ," +
+                                " just put your link on link attribute and enjoy. please refer to its help. this is easy to install and easy to use";
+                                $scope.text3 = "Also there is a filter in module that truncate your text.";
                 });
         </script>
 </body>
