@@ -39,7 +39,7 @@ you can truncate your text with this filter.
 - 10: number of characters that are displayed. 
  
 ### Example 
-[Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) for 0.1.0 eddition.
-[Example on CodePen](https://codepen.io/fardin_esmi/pen/wpQmxQ?editors=1000#0) for 1.0.0 edition.
+- [Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) for 0.1.0 eddition.
+- [Example on CodePen](https://codepen.io/fardin_esmi/pen/wpQmxQ?editors=1000#0) for 1.0.0 edition.
 
  
