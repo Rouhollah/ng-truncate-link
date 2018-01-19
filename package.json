@@ -9,5 +9,5 @@
   "keywords": ["angularjs", "truncate", "truncate link", "truncate text", "truncate filter"],
   "author": "Rouhollah Torshizi <torshizi1@gmail.com>",
    "license": "GPL-3.0",
-   "main": "dist/truncateLinkDirective.js"
+   "main": "dist/ng-truncate-link.js"
 }
