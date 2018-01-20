@@ -1,7 +1,7 @@
-# LinkWithTruncateText directive 
-When you add this module to your project , you have a directive and a filter.
-You can use this directive for both a link and a simple text. with the filter you have, you can simply truncate the text.
-### Syntax 
+# ng-truncate-link directive 
+You can use this directive for both a link and a plain text, and with the filter you have, you can simply truncate the text.
+
+### Syntax for directive
 ``` 
 <ng-truncate-link  
                   link="about.html" or {{item.Address}} 
@@ -17,7 +17,7 @@ You can use this directive for both a link and a simple text. with the filter yo
 - ng-truncate-link: name of directive. 
 - link: put your address here. **NOTE: If you do not define this feature, the text input, will look like a plain text, not a link**. 
 - number: With this attribute, you can specify how many characters are displayed. 
-- text: your text must be here. static or dynamic. 
+- text: your text must be here. static or dynamic. **NOTE: **
 - more: this is a text that you want are displayed when the text has truncated. 
 - less: This text is displayed before the main text is shortened. 
 - class: use this attribute to set class(es). 

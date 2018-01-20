@@ -6,9 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" />
         <style>
-                #wordForTruncate{
-                        color: red;
-                }
+               
         </style>
 </head>
 
@@ -24,7 +22,7 @@
                                 <br>
                                 <i style="font-size:14px;font-weight:bold">Truncated Link by directive:</i>
                                 <div>
-                                        <ng-truncate-link link="about.html" number=50 text="text" more="show" less="hide" class="noUnderLine" target="_blank">
+                                        <ng-truncate-link link="about.html" number=50 text="text" more="show" less="hide" class="myclass" target="_blank">
                                         </ng-truncate-link>
                                 </div>
                         </div>
@@ -38,7 +36,9 @@
                                 <br>
                                 <i style="font-size:14px;font-weight:bold">Truncated Text by directive:</i>
                                 <div>
-                                        <ng-truncate-link  number=50 text="text" more="more" less="less" class="noUnderLine">
+                                        <ng-truncate-link  number=50
+                                                           text="'If you want to shorten a plain text, as you know, you should put it in the single quote.'"
+                                                            more="more" less="less" class="myclass2">
                                         </ng-truncate-link>
                                 </div>
                         </div>
@@ -49,27 +49,26 @@
                         <div class="row">
                                 <div>
                                         <i style="font-size:14px;font-weight:bold">Original Text:</i>
-                                        <p>{{text2}}</p>
+                                        <p>{{text3}}</p>
                                         <br>
                                         <i style="font-size:14px;font-weight:bold">Truncated Text by Filter:</i>
-                                        <p> {{text2|truncateText:25}}</p>
+                                        <p> {{text3|truncateText:25}}</p>
                                 </div>
                         </div>
                 </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="../dist/truncateLinkDirective.js"></script>
+        <script src="../dist/ng-truncate-link.js"></script>
        <script>
 
                 const app = angular.module("sampleModule", ['truncateLinkModule']);
 
                 app.controller("myCtrl", function ($scope, $http) {
                         $scope.text = "By this directive you can truncate your Link or Text. if you define a link in directive ,"+
-                        " it will generate <a> element and the text will be a link. just put your link on link attribute and enjoy. this is easy to install and easy to use.";
+                        " it will generate <a> element and the text will be a link. just put your link on link attribute and enjoy."+
+                                " this is easy to install and easy to use.";
                         
-                        $scope.text2 = "Also by this directive you can truncate your text. if you would want your text to be a link ," +
-                                " just put your link on link attribute and enjoy. please refer to its help. this is easy to install and easy to use";
                                 $scope.text3 = "Also there is a filter in module that truncate your text.";
                 });
         </script>

@@ -4,9 +4,9 @@
   app.directive("ngTruncateLink", function() {
 
     var template1='<a href="{{link}}"  class="{{class}}" target="{{target}}">{{truncate}}</a>'+
-    '<span style="cursor:pointer;" id="wordForTruncate" ng-click="checkCondition()">{{replace?more:less}}</span>';
+    '<span style="cursor:pointer;" class="wordForTruncate" ng-click="checkCondition()">{{replace?more:less}}</span>';
     var template2='<span  class="{{class}}" >{{truncate}}</span>'+
-    '<span style="cursor:pointer;" id="wordForTruncate" ng-click="checkCondition()">{{replace?more:less}}</span>';
+    '<span style="cursor:pointer;" class="wordForTruncate" ng-click="checkCondition()">{{replace?more:less}}</span>';
 
     return {
       restrict: "E",
@@ -14,7 +14,7 @@
         link: "@link",
         more: "@more",
         less: "@less",
-        text: "=text",
+        text: "=",
         number: "@number",
         class: "@class",
         target:"@target"
@@ -28,7 +28,7 @@
     },
       link: function(scope, element, attr) {
         var res = scope.text.substring(scope.number, scope.text.length);
-        scope.truncate = scope.text.replace(res, "...");
+        scope.truncate = scope.text.replace(res, "... ");
         scope.replace = true;
         scope.checkCondition = function() {
           if (scope.replace) {
@@ -44,7 +44,7 @@
 
         scope.hideFullText = function() {
           var org = scope.text.substring(scope.number, scope.text.length);
-          scope.truncate = scope.text.replace(res, "...");
+          scope.truncate = scope.text.replace(res, "... ");
           scope.replace = true;
         };
       }
@@ -56,7 +56,7 @@
       if (text != null && text.trim() != "") {
         if (text.length > number) {
           var res = text.substring(number, text.length);
-          var tr = text.replace(res, "...");
+          var tr = text.replace(res, "... ");
           text = tr;
           return text;
         }
