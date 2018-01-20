@@ -6,7 +6,7 @@ You can use this directive for both a link and a plain text, and with the filter
 <ng-truncate-link  
                   link="about.html" or {{item.Address}} 
                   number=50  
-                  text="a long text that must be truncate" or {{item.Message}} 
+                  text="'a long text that must be truncate'" or {{item.Message}} 
                   more="show"  
                   less="hide"  
                   class="noUnderLine" 
@@ -17,7 +17,7 @@ You can use this directive for both a link and a plain text, and with the filter
 - ng-truncate-link: name of directive. 
 - link: put your address here. **NOTE: If you do not define this feature, the text input, will look like a plain text, not a link**. 
 - number: With this attribute, you can specify how many characters are displayed. 
-- text: your text must be here. static or dynamic. **NOTE: **
+- text: your text must be here. static or dynamic. **NOTE:put your plain text in single quote**
 - more: this is a text that you want are displayed when the text has truncated. 
 - less: This text is displayed before the main text is shortened. 
 - class: use this attribute to set class(es). 
