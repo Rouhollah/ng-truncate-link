@@ -37,10 +37,18 @@ you can truncate your text with this filter.
 - item.Message: your text. 
 - truncateText: name of filter. 
 - 10: number of characters that are displayed. 
- 
+
+### Use class `.ngToggleText` to style labels
+```
+.ngToggleText{
+    font-style: oblique;
+    color: red;
+    cursor:pointer;
+}
+```
 ### Example 
-- [Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) for 0.1.0 eddition. its name is "Abnabat".
-- [Example on CodePen](https://codepen.io/fardin_esmi/full/wpQmxQ/) for 1.0.0 edition. its name is "Bamyieh".
-- [Example on CodePen]() for 1.1.1 eddition. its name is "Baklava".
+- [Example on CodePen](https://codepen.io/fardin_esmi/project/full/ANqrzY/) for 0.1.0 eddition. its name is "Abnabat". **see just for code review.**
+- [Example on CodePen](https://codepen.io/fardin_esmi/full/wpQmxQ/) for 1.0.0 edition. its name is "Bamyieh". **see just for code review.**
+- [Example on CodePen](https://codepen.io/fardin_esmi/full/rpRzVE/) for 1.1.1 eddition. its name is "Cake Yazdi".
 
  
