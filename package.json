@@ -1,13 +1,19 @@
 {
   "name": "ng-truncate-link",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "you have a directive and a filter. You can use this directive for both a link and a simple text. with the filter you have, you can simply truncate the text.",
   "repository": {
     "type": "git",
     "url": "https://github.com/Rouhollah/ng-truncate-link"
   },
-  "keywords": ["angularjs", "truncate", "truncate link", "truncate text", "truncate filter"],
+  "keywords": [
+    "angularjs",
+    "truncate",
+    "truncate link",
+    "truncate text",
+    "truncate filter"
+  ],
   "author": "Rouhollah Torshizi <torshizi1@gmail.com>",
-   "license": "GPL-3.0",
-   "main": "dist/ng-truncate-link.js"
+  "license": "GPL-3.0",
+  "main": "dist/ng-truncate-link.js"
 }
