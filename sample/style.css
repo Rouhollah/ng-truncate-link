@@ -1,6 +1,15 @@
 .myclass{
     font-size: 15px;
+   
 }
+.myclass2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ngToggleText{
+    font-style: oblique;
+    color: red;
+}
+
 a {
     text-decoration: none;
 }
